@@ -114,6 +114,20 @@
 	<script src="common-js/jquery.fluidbox.min.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
-	
+	<script>
+		function(){
+		var clocks = ['🚶‍♀️ ','🏃‍♀️'];
+		let currentIndex = 0;
+		function loop() {
+			location.hash = clocks[currentIndex % clocks.length];
+			currentIndex++;
+			if (currentIndex >= clocks.length) {
+			  currentIndex = 0; 
+			}
+			setTimeout(loop, 100);
+		}
+		}();
+		
+		</script>
 </body>
 </html>
